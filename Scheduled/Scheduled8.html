@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healix-Health Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Scheduled-Assets/Scheduled.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+
+<body>
+    <!-- Section-Navbar -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-dark position-relative">
+                    <div class="container-fluid position-relative">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand logo-center text-white" href="#">
+                            <h1>Healix</h1>
+                        </a>
+                        <div class="collapse navbar-collapse align-items-center" id="navbarSupportedContent">
+                            <ul class="navbar-nav gap-lg-5 me-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="../Services.html">Service's</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="../Doctors.html">Doctor's</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="../Schedule/Schedulemain.html">Schedule</a>
+                                </li>
+                            </ul>
+                            <div class="d-flex align-items-center gap-3 ms-auto" id="navryt">
+                                <a href="../Search.html" class="nav-link text-white"><i class="fa fa-search"></i></a>
+                                <a href="../Favouritepage.html" class="nav-link text-white"><i
+                                        class="fa fa-heart"></i></a>
+                                <div class="nav-link text-white d-flex align-items-center">
+                                    <button style="background: none; border: none;"><i class="fa fa-user me-2"
+                                            style="color: white;" onclick="togglePanel()"></i></button>
+                                    <a style="text-decoration: none; color: white;" href="../Loginpage.html">
+                                        <div class="d-flex flex-column" style="margin-left: 20px;">
+                                            <span style="font-size: 12px;">Register</span>
+                                            <span style="font-size: 14px;">Login</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SETTINGS PANEL -->
+    <div class="settings-panel" id="panel">
+
+        <!-- USER -->
+        <div class="user-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+            <div>
+                <strong>Mr. Nikhil</strong><br>
+                <small>nikhilkhullar0@gmail.com</small>
+            </div>
+        </div>
+
+        <!-- DARK MODE -->
+        <div class="menu-item">
+            Dark Mode
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <!-- NOTIFICATIONS -->
+        <div class="menu-item">
+            Notifications
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="dropdown-box">
+
+            <!-- BUTTON -->
+            <div class="dropdown-header" onclick="toggleDropdown()">
+                Language <i class="	fa fa-angle-down"></i>
+            </div>
+
+            <!-- DROPDOWN -->
+            <div class="dropdown-content" id="dropdown">
+
+                <label class="option">
+                    English
+                    <input type="radio" name="lang" checked>
+                    <span class="radio"></span>
+                </label>
+
+                <label class="option">
+                    Hindi
+                    <input type="radio" name="lang">
+                    <span class="radio"></span>
+                </label>
+
+                <label class="option">
+                    Tamil
+                    <input type="radio" name="lang">
+                    <span class="radio"></span>
+                </label>
+
+                <label class="option">
+                    Marathi
+                    <input type="radio" name="lang">
+                    <span class="radio"></span>
+                </label>
+
+            </div>
+
+        </div>
+        <!-- EXTRA -->
+        <div class="menu-item"><a style="text-decoration: none; color: white;" href="../Reports.html">Reports</a></div>
+        <a href="./Appointments.html" style="text-decoration: none; color: white;">
+            <div class="menu-item">Appointments</div>
+        </a>
+        <div class="menu-item">Help & Support</div>
+        <div class="menu-item">Log Out</div>
+
+    </div>
+
+
+    <script>
+        function toggleDropdown() {
+            document.getElementById("dropdown").classList.toggle("active");
+        }
+    </script>
+
+    <script>
+        function togglePanel() {
+            document.getElementById("panel").classList.toggle("active");
+            document.getElementById("layout").classList.toggle("active");
+        }
+    </script>
+
+    <div class="container py-5">
+        <div class="schedule-card">
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="doctor-box mb-4">
+                        <img style="border-radius: 100%;" src="../Doctors-Assets/no pic.png">
+                        <div>
+                            <div class="rating">⭐ 4.5 Star (15.5k ratings)</div>
+                            <h5 class="mb-1">Dr. Michael Chen</h5>
+                            <small>Orthopedic Surgeon</small>
+                        </div>
+                    </div>
+
+                    <p class="text-muted">There are 7 doctors available in this field</p>
+                    <a href="../Doctors.html" class="text-danger fw-semibold">Browse Doctors</a>
+
+                    <hr>
+
+                    <h6 class="mt-4 mb-3">Select a Date</h6>
+
+                    <div class="option">
+                        <input type="radio" name="date">
+                        <label>Today <small class="text-muted">Jul 9</small></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" name="date">
+                        <label>Tomorrow <small class="text-muted">Jul 10</small></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" name="date">
+                        <label>Day after tomorrow <small class="text-muted">Jul 11</small></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" name="date">
+                        <label>Next week <small class="text-muted">Jul 16</small></label>
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" name="date" checked>
+                        <label class="text-danger">Custom Date</label>
+                    </div>
+
+                </div>
+                <div class="col-lg-7">
+
+                    <div class="calendar">
+
+                        <div class="calendar-header">
+                            <button class="btn btn-light">←</button>
+                            <h6 class="m-0">July 2026</h6>
+                            <button class="btn btn-light">→</button>
+                        </div>
+                        <div class="calendar-grid text-muted fw-semibold">
+                            <div>SUN</div>
+                            <div>MON</div>
+                            <div>TUE</div>
+                            <div>WED</div>
+                            <div>THU</div>
+                            <div>FRI</div>
+                            <div>SAT</div>
+                        </div>
+                        <div class="calendar-grid mt-2">
+                            <div class="day">1</div>
+                            <div class="day">2</div>
+                            <div class="day">3</div>
+                            <div class="day">4</div>
+                            <div class="day">5</div>
+                            <div class="day">6</div>
+                            <div class="day">7</div>
+                            <div class="day">8</div>
+                            <div class="day">9</div>
+                            <div class="day">10</div>
+                            <div class="day">11</div>
+                            <div class="day">12</div>
+                            <div class="day">13</div>
+                            <div class="day">14</div>
+                            <div class="day">15</div>
+                            <div class="day">16</div>
+                            <div class="day">17</div>
+                            <div class="day active-day">18</div>
+                            <div class="day">19</div>
+                            <div class="day">20</div>
+                            <div class="day">21</div>
+                            <div class="day">22</div>
+                            <div class="day">23</div>
+                            <div class="day">24</div>
+                            <div class="day">25</div>
+                            <div class="day">26</div>
+                            <div class="day">27</div>
+                            <div class="day">28</div>
+                        </div>
+                    </div>
+                    <div class="text-end mt-4">
+                        <button class="btn main" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+                            Confirm Appointment
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="appointmentModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content custom-modal position-relative">
+                <button class="close-btn" data-bs-dismiss="modal">&times;</button>
+                <div class="icon-box">
+                    📅
+                </div>
+                <p class="popup-title">
+                    You've successfully confirmed your appointment
+                </p>
+
+                <div class="popup-time">10:30 AM</div>
+
+                <div class="popup-name">Dr. Michael Chen</div>
+
+                <div class="popup-sub">
+                    Wednesday, January 18, 2026 <br>
+                    Orthopedic Surgeon
+                </div>
+                <a href="../Appointments.html" style="text-decoration: none; color: white;"><button class="btn-main">
+                        MY APPOINTMENTS</a>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <div class="row text-white g-4">
+
+                        <div class="col-6 col-md-4 col-lg-2" style="color: rgb(78, 78, 78);">
+                            <h6>About Healix</h6>
+                            <ul>
+                                <li>About Us</li>
+                                <li>Our Doctors</li>
+                                <li>Careers</li>
+                                <li>Blog & Articles</li>
+                                <li>Press & Media</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-2" style="color: rgb(78, 78, 78);">
+                            <h6>Popular Specialities</h6>
+                            <ul>
+                                <li>Cardiology</li>
+                                <li>General Medicine</li>
+                                <li>Neurology</li>
+                                <li>Orthopedics</li>
+                                <li>Dermatology</li>
+                                <li>Pediatrics</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-2" style="color: rgb(78, 78, 78);">
+                            <h6>Book Appointment</h6>
+                            <ul>
+                                <li>Find a Doctor </li>
+                                <li>Book Appointment</li>
+                                <li>Schedule Visit</li>
+                                <li>Emergency Consultation</li>
+                                <li>Online Consultation</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-2" style="color: rgb(78, 78, 78);">
+                            <h6>Patient Support</h6>
+                            <ul>
+                                <li>My Appointments</li>
+                                <li>Medical Records</li>
+                                <li>Prescription History</li>
+                                <li>Insurance & Billing</li>
+                                <li>Help Center</li>
+                                <li>FAQs</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-2" style="color: rgb(78, 78, 78);">
+                            <h6>Legal & Policies</h6>
+                            <ul>
+                                <li>Privacy Policy</li>
+                                <li>Terms & Conditions</li>
+                                <li>Refund Policy</li>
+                                <li>Cookie Policy</li>
+                                <li>Data Security</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-2" style="color: rgb(78, 78, 78);">
+                            <h6>Contact & Connect</h6>
+                            <ul>
+                                <li> <i class="fa fa-phone" style="margin-right: 10px;"></i>+91 90153-16384</li>
+                                <li> <i class="fa fa-envelope" style="margin-right: 10px;"></i>support@healix.com</li>
+                                <li> <i class="fa fa-map-marker" style="margin-right: 10px;"></i>Chandigarh,
+                                    India</li>
+                                <li> <i class="fa fa-clock" style="margin-right: 10px;"></i>24/7</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="border-secondary my-4" style="color:  rgb(70, 70, 70);">
+                    <div
+                        class="d-flex flex-column flex-md-row justify-content-between align-items-center text-white small">
+
+                        <div style="color: rgb(70, 70, 70) ;">
+                            © 2026 Healix-Healthcare India Pvt. Ltd.
+                        </div>
+
+                        <div class="d-flex gap-3 mt-3 mt-md-0">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script>
+        document.addEventListener('click', function (e) {
+            let dot = document.createElement("div");
+            dot.style.position = "absolute";
+            dot.style.left = e.pageX + "px";
+            dot.style.top = e.pageY + "px";
+            dot.style.width = "10px";
+            dot.style.height = "10px";
+            dot.style.background = "#4fb6c2";
+            dot.style.borderRadius = "50%";
+            dot.style.transform = "translate(-50%, -50%)";
+            dot.style.animation = "clickAnim 0.5s ease-out";
+
+            document.body.appendChild(dot);
+
+            setTimeout(() => dot.remove(), 500);
+        });
+    </script>
+
+</body>
+<script>
+    window.addEventListener("load", function () {
+        setTimeout(() => {
+            document.getElementById("preloader").style.display = "none";
+        }, 500);
+    });
+</script>
+</body>
+
+</html>

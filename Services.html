@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healix-Health Care</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./Serrvices-Assets/services.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<div id="preloader">
+    <div class="loader"></div>
+</div>
+
+<body>
+    <!-- Section-Navbar -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <nav class="navbar navbar-expand-lg navbar-dark position-relative">
+                    <div class="container-fluid position-relative">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <a class="navbar-brand logo-center text-white" href="#">
+                            <h1>Healix</h1>
+                        </a>
+                        <div class="collapse navbar-collapse align-items-center" id="navbarSupportedContent">
+                            <ul class="navbar-nav gap-lg-5 me-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link active" href="./Services.html">Service's</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="./Doctors.html">Doctor's</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./Schedule/Schedulemain.html">Schedule</a>
+                                </li>
+                            </ul>
+                            <div class="d-flex align-items-center gap-3 ms-auto" id="navryt">
+                                <a href="./Search.html" class="nav-link text-white"><i class="fa fa-search"></i></a>
+                                <a href="./Favouritepage.html" class="nav-link text-white"><i
+                                        class="fa fa-heart"></i></a>
+                                <div class="nav-link text-white d-flex align-items-center">
+                                    <button style="background: none; border: none;"><i class="fa fa-user me-2"
+                                            style="color: white;" onclick="togglePanel()"></i></button>
+                                    <a style="text-decoration: none; color: white;" href="./Loginpage.html">
+                                        <div class="d-flex flex-column" style="margin-left: 20px;">
+                                            <span style="font-size: 12px;">Register</span>
+                                            <span style="font-size: 14px;">Login</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SETTINGS PANEL -->
+    <div class="settings-panel" id="panel">
+
+        <!-- USER -->
+        <div class="user-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+            <div>
+                <strong>Mr. Nikhil</strong><br>
+                <small>nikhilkhullar0@gmail.com</small>
+            </div>
+        </div>
+
+        <!-- DARK MODE -->
+        <div class="menu-item">
+            Dark Mode
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <!-- NOTIFICATIONS -->
+        <div class="menu-item">
+            Notifications
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div class="dropdown-box">
+
+            <!-- BUTTON -->
+            <div class="dropdown-header" onclick="toggleDropdown()">
+                Language <i class="	fa fa-angle-down"></i>
+            </div>
+
+            <!-- DROPDOWN -->
+            <div class="dropdown-content" id="dropdown">
+
+                <label class="option">
+                    English
+                    <input type="radio" name="lang" checked>
+                    <span class="radio"></span>
+                </label>
+
+                <label class="option">
+                    Hindi
+                    <input type="radio" name="lang">
+                    <span class="radio"></span>
+                </label>
+
+                <label class="option">
+                    Tamil
+                    <input type="radio" name="lang">
+                    <span class="radio"></span>
+                </label>
+
+                <label class="option">
+                    Marathi
+                    <input type="radio" name="lang">
+                    <span class="radio"></span>
+                </label>
+            </div>
+        </div>
+        <!-- EXTRA -->
+        <div class="menu-item"><a style="text-decoration: none; color: white;" href="./Reports.html">Reports</a></div>
+        <a href="./Appointments.html" style="text-decoration: none; color: white;">
+            <div class="menu-item">Appointments</div>
+        </a>
+        <div class="menu-item">Help & Support</div>
+        <div class="menu-item">Log Out</div>
+
+    </div>
+    <script>
+        function toggleDropdown() {
+            document.getElementById("dropdown").classList.toggle("active");
+        }
+    </script>
+
+    <script>
+        function togglePanel() {
+            document.getElementById("panel").classList.toggle("active");
+            document.getElementById("layout").classList.toggle("active");
+        }
+    </script>
+
+    <div class="healix-bg">
+
+        <!-- Mesh gradient blobs -->
+        <div class="mesh-layer"></div>
+
+        <!-- Grid lines -->
+        <div class="grid-lines"></div>
+
+        <!-- Scanlines -->
+        <div class="scanline"></div>
+
+        <!-- Pulse rings (centered) -->
+        <div class="pulse-ring"
+            style="width:500px;height:500px;top:50%;left:60%;transform:translate(-50%,-50%);animation-delay:0s;">
+        </div>
+        <div class="pulse-ring"
+            style="width:500px;height:500px;top:50%;left:60%;transform:translate(-50%,-50%);animation-delay:2s;">
+        </div>
+        <div class="pulse-ring"
+            style="width:500px;height:500px;top:50%;left:60%;transform:translate(-50%,-50%);animation-delay:4s;">
+        </div>
+
+        <!-- Cards Carousel -->
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <h1 class="section-title" style="font-family: sans-serif;color:white; margin-bottom: 30px;">
+                        Service's
+                    </h1>
+
+                    <div id="serviceCarousel" class="carousel slide" data-bs-ride="false">
+
+                        <div class="carousel-inner">
+
+                            <!-- SLIDE 1 -->
+                            <div class="carousel-item active">
+
+                                <div class="row g-4">
+
+                                    <!-- CARD 1 -->
+                                    <div class="col-12 col-md-6">
+
+                                        <div class="service-card">
+
+                                            <img src="./Serrvices-Assets/s1.png">
+
+                                            <div class="service-content">
+
+                                                <h6 class="text-muted">
+                                                    Advanced Care, Simplified
+                                                </h6>
+
+                                                <p style="color: rgb(255, 255, 255);">
+                                                    Find verified doctors across multiple
+                                                    specialties and get the care you
+                                                    need with confidence, precision,
+                                                    and ease.
+                                                </p>
+
+                                                <a href="./Doctors.html" class="btn service-btn">
+                                                    Find Doctor's
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- CARD 2 -->
+                                    <div class="col-12 col-md-6">
+
+                                        <div class="service-card">
+
+                                            <img src="./Serrvices-Assets/s2.png">
+
+                                            <div class="service-content">
+
+                                                <h6 class="text-muted">
+                                                    Precision Healthcare Experience
+                                                </h6>
+
+                                                <p style="color:rgb(255, 255, 255);">
+                                                    Delivering expert care through
+                                                    advanced technology and seamless
+                                                    appointment systems.
+                                                </p>
+
+                                                <a href="./Schedule/Schedulemain.html" class="btn service-btn">
+                                                    Book Appointment
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <!-- SLIDE 2 -->
+                            <div class="carousel-item">
+
+                                <div class="row g-4">
+
+                                    <!-- CARD 3 -->
+                                    <div class="col-12 col-md-6">
+
+                                        <div class="service-card">
+
+                                            <img src="./Serrvices-Assets/s3.png">
+
+                                            <div class="service-content">
+
+                                                <h6 class="text-muted">
+                                                    Care You Can Trust
+                                                </h6>
+
+                                                <p style="color:rgb(255, 255, 255);">
+                                                    Connecting you with experienced
+                                                    specialists for accurate diagnosis
+                                                    and personalized treatment.
+                                                </p>
+
+                                                <a href="./Schedule/Schedulemain.html" class="btn service-btn">
+                                                    Book Appointment
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- CARD 4 -->
+                                    <div class="col-12 col-md-6">
+
+                                        <div class="service-card">
+
+                                            <img src="./Serrvices-Assets/s4.png">
+
+                                            <div class="service-content">
+
+                                                <h6 class="text-muted">
+                                                    Connect with Trusted Specialists
+                                                </h6>
+
+                                                <p style="color:rgb(255, 255, 255);">
+                                                    Find verified doctors across multiple
+                                                    specialties and get the care you
+                                                    need with confidence, precision,
+                                                    and ease.
+                                                </p>
+
+                                                <a href="./Schedule/Schedulemain.html" class="btn service-btn">
+                                                    Book Appointment
+                                                </a>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <!-- CONTROLS -->
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel"
+                            data-bs-slide="prev">
+
+                            <span class="carousel-control-prev-icon"></span>
+
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel"
+                            data-bs-slide="next">
+
+                            <span class="carousel-control-next-icon"></span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <hr style="color: rgb(129, 129, 129);margin-top: 20px;">
+        <!-- Main page video -->
+        <div class="container py-5">
+
+            <div class="row justify-content-center">
+
+                <div class="col-lg-10">
+
+                    <div class="row align-items-center g-5">
+
+                        <!-- LEFT PICTURE -->
+                        <div class="col-lg-6">
+
+                            <div class="video-box">
+                                <video autoplay muted loop playsinline>
+                                    <source src="./Serrvices-Assets/s1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT TEXT -->
+                        <div class="col-lg-6">
+
+                            <h1 style="font-family: sans-serif;color: white;">
+                                Consult Now
+                            </h1>
+
+                            <p class="mt-3" style="color: rgb(201, 201, 201);">
+                                Comprehensive diagnosis and treatment for heart conditions with experienced
+                                cardiologists
+                                and modern technology.
+                            </p>
+
+                            <a href="./Doctors.html"><button class="btn mt-3"
+                                    style="border-radius: 2px; background-color: #499FB6;; color: white;">
+                                    Book Appointment
+                                </button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="row align-items-center g-5">
+                        <!-- LEFT TEXT -->
+                        <div class="col-lg-6">
+
+                            <h1 style="font-family: sans-serif; color: white;">Expert Brain & Nerve Care</h1>
+
+                            <p class="mt-3" style="color: rgb(201, 201, 201);">
+                                Specialized care for neurological disorders with precise diagnosis and personalized
+                                treatment plans.
+                            </p>
+                            <a href="./Doctors.html6"><button class="btn mt-3"
+                                    style="border-radius: 2px; background-color: #499FB6;; color: white;">
+                                    Book Appointment
+                                </button></a>
+
+                        </div>
+
+                        <!-- RIGHT VIDEO -->
+                        <div class="col-lg-6">
+                            <div class="video-box">
+                                <video autoplay muted loop playsinline>
+                                    <source src="./Serrvices-Assets/s2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  -->
+        <div class="container py-5">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-10">
+
+                    <div class="row align-items-center g-5">
+
+                        <!-- LEFT PICTURE -->
+                        <div class="col-lg-6">
+
+                            <div class="video-box">
+                                <video autoplay muted loop playsinline>
+                                    <source src="./Serrvices-Assets/s3.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                        <!-- RIGHT TEXT -->
+                        <div class="col-lg-6">
+
+                            <h1 style="font-family: sans-serif;color: white;">Stronger Bones, Better Movement</h1>
+
+                            <p class="mt-3" style="color: rgb(201, 201, 201);">
+                                Advanced care for joints, bones, and muscles to help you regain strength, mobility, and
+                                comfort.
+                            </p>
+                            <a href="./Doctors.html"><button class="btn mt-3"
+                                    style="border-radius: 2px; background-color: #499FB6;; color: white;">
+                                    Find a Specialist
+                                </button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- disclaimer -->
+        <div class=" container py-2">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h5 style="color: rgb(183, 183, 183);" class="mb-2">Disclaimer</h5>
+                    <p style="color: rgb(183, 183, 183);font-size: 10px;" class=" mb-0">
+                        Healix operates as an intermediary platform connecting users with healthcare professionals for
+                        appointments and consultations. It does not practice medicine or provide medical services. All
+                        medical advice and treatment are the sole responsibility of the respective healthcare providers.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr style="color: rgb(129, 129, 129);margin-top: 40px;">
+
+        <!-- Main page final cards -->
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <div class="row g-3 align-items-stretch text-center">
+
+                        <!-- CARD -->
+                        <div class="col-12 col-md-6 col-lg-3 d-flex">
+                            <div class="info-card w-100" id="bouncingcards">
+                                <i class="fa fa-user-md mb-4"></i>
+                                <h5 style="font-size: 15px;">Find Doctors</h5>
+                                <p style="font-size: 14px;" class="mt-1">Discover trusted specialists across multiple
+                                    fields.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-3 d-flex">
+                            <div class="info-card w-100" id="bouncingcards">
+                                <i class="fa fa-map-marker mb-4"></i>
+                                <h5 style="font-size: 15px;">Nearby Clinics</h5>
+                                <p style="font-size: 14px;" class="mt-1">Locate hospitals and clinics near your
+                                    location.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-6 col-lg-3 d-flex">
+                            <div class="info-card w-100" id="bouncingcards">
+                                <i class="fa fa-calendar mb-4"></i>
+                                <h5 style="font-size: 15px;">Book Appointment</h5>
+                                <p style="font-size: 14px;" class="mt-1">Schedule visits instantly with your preferred
+                                    doctor.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3 d-flex">
+                            <div class="info-card w-100" id="bouncingcards">
+                                <i class="fa fa-calendar mb-4"></i>
+                                <h5 style="font-size: 15px;">Secure Payments</h5>
+                                <p style="font-size: 14px;" class="mt-1">Safe transactions with insurance assistance.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+
+                    <div class="row text-white g-4">
+
+                        <div class="col-6 col-md-4 col-lg-2" style="color: rgb(78, 78, 78);">
+                            <h6>About Healix</h6>
+                            <ul>
+                                <a href="./index.html" style="text-decoration: none;">
+                                    <li>About Us</li>
+                                </a>
+                                <a href="./Doctors.html" style="text-decoration: none;">
+                                    <li>Our Doctors</li>
+                                </a>
+                                <li>Careers</li>
+                                <li>Blog & Articles</li>
+                                <li>Press & Media</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-2" style="color: rgb(78, 78, 78);">
+                            <h6>Popular Specialities</h6>
+                            <ul>
+                                <li>Cardiology</li>
+                                <li>General Medicine</li>
+                                <li>Neurology</li>
+                                <li>Orthopedics</li>
+                                <li>Dermatology</li>
+                                <li>Pediatrics</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-2" style="color: rgb(78, 78, 78);">
+                            <h6>Book Appointment</h6>
+                            <ul>
+                                <li>Find a Doctor </li>
+                                <li>Book Appointment</li>
+                                <li>Schedule Visit</li>
+                                <li>Emergency Consultation</li>
+                                <li>Online Consultation</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-2" style="color: rgb(78, 78, 78);">
+                            <h6>Patient Support</h6>
+                            <ul>
+                                <li>My Appointments</li>
+                                <li>Medical Records</li>
+                                <li>Prescription History</li>
+                                <li>Insurance & Billing</li>
+                                <li>Help Center</li>
+                                <li>FAQs</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-2" style="color: rgb(78, 78, 78);">
+                            <h6>Legal & Policies</h6>
+                            <ul>
+                                <li>Privacy Policy</li>
+                                <li>Terms & Conditions</li>
+                                <li>Refund Policy</li>
+                                <li>Cookie Policy</li>
+                                <li>Data Security</li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-md-4 col-lg-2" style="color: rgb(78, 78, 78);">
+                            <h6>Contact & Connect</h6>
+                            <ul>
+                                <li> <i class="fa fa-phone" style="margin-right: 10px;"></i>+91 90153-16384</li>
+                                <li> <i class="fa fa-envelope" style="margin-right: 10px;"></i>support@healix.com</li>
+                                <li> <i class="fa fa-map-marker" style="margin-right: 10px;"></i>Chandigarh, India</li>
+                                <li> <i class="fa fa-clock" style="margin-right: 10px;"></i>24/7</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr class="border-secondary my-4" style="color:  rgb(70, 70, 70);">
+                    <div
+                        class="d-flex flex-column flex-md-row justify-content-between align-items-center text-white small">
+
+                        <div style="color: rgb(70, 70, 70) ;">
+                            © 2026 Healix-Healthcare India Pvt. Ltd.
+                        </div>
+
+                        <div class="d-flex gap-3 mt-3 mt-md-0">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <script>
+        document.addEventListener('click', function (e) {
+            let dot = document.createElement("div");
+            dot.style.position = "absolute";
+            dot.style.left = e.pageX + "px";
+            dot.style.top = e.pageY + "px";
+            dot.style.width = "10px";
+            dot.style.height = "10px";
+            dot.style.background = "#4fb6c2";
+            dot.style.borderRadius = "50%";
+            dot.style.transform = "translate(-50%, -50%)";
+            dot.style.animation = "clickAnim 0.5s ease-out";
+
+            document.body.appendChild(dot);
+
+            setTimeout(() => dot.remove(), 500);
+        });
+    </script>
+
+</body>
+<script>
+    window.addEventListener("load", function () {
+        setTimeout(() => {
+            document.getElementById("preloader").style.display = "none";
+        }, 500);
+    });
+</script>
+
+</html>

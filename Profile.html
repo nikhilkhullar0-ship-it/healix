@@ -1,0 +1,94 @@
+<i class="fa fa-user me-2" style="color: white;" onclick="togglePanel()"></i>
+
+
+
+<!-- SETTINGS PANEL -->
+<div class="settings-panel" id="panel">
+
+    <!-- USER -->
+    <div class="user-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
+        <div>
+            <strong>Mr. Nikhil</strong><br>
+            <small>nikhilkhullar0@gmail.com</small>
+        </div>
+    </div>
+
+    <!-- DARK MODE -->
+    <div class="menu-item">
+        Dark Mode
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <!-- NOTIFICATIONS -->
+    <div class="menu-item">
+        Notifications
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="dropdown-box">
+
+        <!-- BUTTON -->
+        <div class="dropdown-header" onclick="toggleDropdown()">
+            Language <i class="	fa fa-angle-down"></i>
+        </div>
+
+        <!-- DROPDOWN -->
+        <div class="dropdown-content" id="dropdown">
+
+            <label class="option">
+                English
+                <input type="radio" name="lang" checked>
+                <span class="radio"></span>
+            </label>
+
+            <label class="option">
+                Hindi
+                <input type="radio" name="lang">
+                <span class="radio"></span>
+            </label>
+
+            <label class="option">
+                Tamil
+                <input type="radio" name="lang">
+                <span class="radio"></span>
+            </label>
+
+            <label class="option">
+                Marathi
+                <input type="radio" name="lang">
+                <span class="radio"></span>
+            </label>
+
+        </div>
+
+    </div>
+    <!-- EXTRA -->
+    <a href="./Appointments.html" style="text-decoration: none; color: white;">
+        <div class="menu-item">Appointments</div>
+    </a>
+    <div class="menu-item">Appointments</div>
+    <div class="menu-item">Help & Support</div>
+    <div class="menu-item">Log Out</div>
+
+</div>
+
+
+<script>
+    function toggleDropdown() {
+        document.getElementById("dropdown").classList.toggle("active");
+    }
+</script>
+
+<script>
+    function togglePanel() {
+        document.getElementById("panel").classList.toggle("active");
+        document.getElementById("layout").classList.toggle("active");
+    }
+</script>
